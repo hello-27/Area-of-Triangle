@@ -1,0 +1,40 @@
+import math
+
+def print_heron():
+    print("    /\ ")
+    print("   /  \ ")
+    print("x /    \ y")
+    print(" /      \ ")
+    print("/________\ ")
+    print("    z")
+       
+  
+def print_baseheight():
+    print("    /|\ ")
+    print("   / | \ ")
+    print("  /  |h \ ")
+    print(" /   |   \ ")
+    print("/____|____\ ")
+    print("    z")   
+    
+ 
+
+
+method_decision=input("input 1 if you know all three sides-input 2 if you know the base and the hight: " ) 
+if int(method_decision) ==1:
+    print_heron()
+    
+    print("x, y, and z are the three sides")
+    x=float(input("input x: "))
+    y=float(input("input y: "))
+    z=float(input("input z: "))
+    s=(x+ y+ z)/2.0
+    area_triangle = math.sqrt(s*(s -x)*(s-y)*(s-z))    
+else:
+    print_baseheight()
+    print("where b is the base and h is the hight")
+    b=float(input("input b: "))
+    h=float(input("input h: "))
+    area_triangle=b*h/2.0
+    
+print("the area is "+ str(area_triangle))
